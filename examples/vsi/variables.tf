@@ -67,6 +67,10 @@ variable "tags" {
   default     = null
 }
 
+variable "ibmcloud_api_key" {
+  type = string
+}
+
 variable "network_interfaces" {
   description = "List of network_interfaces that are to be attached to the instance"
   type = list(object({
