@@ -186,5 +186,5 @@ variable "force_recovery_time" {
 variable "enable_floating_ip" {
   description = "Enable this to add floating IP to the VSI"
   type        = bool
-  default     = false
+  default     = true
 }
