@@ -4,6 +4,7 @@
 #####################################################
 
 provider "ibm" {
+   ibmcloud_api_key = var.ibmcloud_api_key
 }
 
 resource "ibm_is_vpc" "vpc" {
@@ -20,6 +21,7 @@ resource "ibm_is_subnet" "subnet" {
 data "ibm_resource_group" "resource_group" {
   name = (var.resource_group != null ? var.resource_group : "default")
 }
+
 
 locals {
   primary_network_interface = [{
